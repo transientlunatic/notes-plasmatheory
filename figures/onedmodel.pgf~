@@ -1,0 +1,62 @@
+\definecolor{accent-pink}{HTML}{C3325F}
+\definecolor{accent-red}{HTML}{9d261d}
+\definecolor{accent-purple}{HTML}{7a43b6}
+\definecolor{muted-blue}{HTML}{195073}
+\definecolor{muted-green}{HTML}{7F8C1F}
+\definecolor{muted-orange}{HTML}{EE913F}
+\tikzset{
+    %Define standard arrow tip
+    >=latex,
+    %Define style for boxes
+    area1/.style={
+		   	fill=muted-green!20, 
+			draw=muted-green,
+          	text centered
+	},
+    area2/.style={
+		   	fill=muted-orange!20, 
+			draw=muted-orange,
+          	text centered
+	},
+    area3/.style={
+		   	fill=accent-purple!20, 
+			draw=accent-purple,
+          	text centered
+	},
+    % Define arrow style
+    relation1/.style={
+	        ->,	
+			color=muted-blue,
+    	    ultra thick,
+        	shorten <=2pt,
+	        shorten >=2pt
+	},
+    relation2/.style={
+	        ->,	
+			color=accent-pink,
+    	    ultra thick,
+        	shorten <=2pt,
+	        shorten >=2pt
+	},
+    relation3/.style={
+	        ->,	
+			color=accent-red,
+    	    ultra thick,
+        	shorten <=2pt,
+	        shorten >=2pt
+	}
+}
+
+\begin{tikzpicture}[scale=2]
+	\draw [color=muted-green] (-2,  1) -- (2, 1);
+	\draw [color=muted-green] (-2, -1) -- (2,-1);
+
+	\draw [color=muted-green] (-1, 1) -- (-1, -1);
+	\draw [color=muted-green] ( 1, 1) -- ( 1, -1);
+
+	\fill [area1] (-1, 1) rectangle (1, -1);
+	\draw (0,0) node [text centered] {Zone of depletion};
+	\draw (-1.5, 1.2) node [text centered] {neutral};
+	\draw (1.5, 1.2) node [text centered] {neutral};
+	\draw (0, -1.2) node [text centered] {positive};
+\end{tikzpicture}

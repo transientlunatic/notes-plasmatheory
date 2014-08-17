@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=0.8]
+\begin{scope}[]
+	\fill [purple,opacity=0.2] (0,0) circle (7);
+	\foreach \t in {20,65,...,360}{
+		\draw [thick, ->] (\t:7) -- (\t:10);
+	}
+\end{scope}
+\begin{scope}[]
+	\foreach \t in {20,65,...,360}{
+	\pgfmathsetmacro{\s}{\t-20};
+		\draw [thick, ->] (\s:5) -- (\t:7);
+	}
+\end{scope}
+\begin{scope}[]
+	\fill [white] (0,0) circle (5);
+	\foreach \t in {0,45,...,360}{
+		\draw [thick, ->] (0,0) -- (\t:5);
+	}
+\end{scope}
+
+\draw [<->, red, ultra thick] (0,-.5) -- (5,-.5) node [fill=white, midway] {$r = ct$};
+\draw [<->, red, ultra thick] (-100:5) -- (-100:7) node [right, midway] {$r^{\prime} = c \Delta t$};
+
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=0.8]
+
+\foreach \y in {1,2,3}{
+	\pgfmathsetmacro{\yp}{\y-1}
+	\draw [accent-blue, <-] (7,-\yp) .. controls (3,-\yp) and (2,-\y) .. (-1,-\y);
+	\draw [accent-blue, <-] (7,\yp) .. controls (3,\yp) and (2,\y) .. (-1,\y);
+}
+\draw [ultra thick, ->] (-2,0) -- (8,0) node [right] {$z$};
+\draw [thick, ->] (-1,0) -- (-1,1) node [midway, left] {$r$};
+\end{tikzpicture}

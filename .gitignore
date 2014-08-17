@@ -1,0 +1,9 @@
+lecture-notes/
+auto/
+*~
+*.aux
+*.log
+*.out
+*.pdf
+*.fdb_latexmk
+*.fls

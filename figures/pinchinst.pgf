@@ -1,0 +1,8 @@
+\begin{tikzpicture}[scale=0.5]
+
+\foreach \y in {1.5,2,..., 4}{
+	\pgfmathsetmacro{\yp}{\y-1}
+	\draw [thick, accent-blue, <-] (7,-\yp) .. controls (3,-\yp) and (2,-\y) .. (-1,-\y) (7,-\yp) .. controls (10,-\yp) and (12,-\y) .. (15,-\y);
+	\draw [thick, accent-blue, <-] (7,\yp) .. controls (3,\yp) and (2,\y) .. (-1,\y) (7,\yp) .. controls (10,\yp) and (12,\y) .. (15,\y);
+}
+\end{tikzpicture}
